@@ -17,8 +17,8 @@ import java.util.Map.Entry;
  */
 public class Translation {
     private final Map<String, String> translations = Maps.newConcurrentMap();
-    private Translation fallback;
-    private String name;
+    private final Translation fallback;
+    private final String name;
 
     public Translation(Translation fallback, Reader reader, String name) throws IOException {
         this(fallback, new JsonParser().parse(reader).getAsJsonObject(), name);

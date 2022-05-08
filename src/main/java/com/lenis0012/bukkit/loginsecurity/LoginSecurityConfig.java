@@ -20,55 +20,55 @@ public class LoginSecurityConfig extends AbstractConfig {
      * Registration settings
      */
     @ConfigKey(path="register.required")
-    private boolean passwordRequired = true;
+    private final boolean passwordRequired = true;
     @ConfigHeader("When enabled, users need to enter a captcha upon registration.")
     @ConfigKey(path = "register.captcha")
-    private boolean registerCaptcha = false;
+    private final boolean registerCaptcha = false;
     @ConfigHeader("When enabled, requires users to enter their password twice upon registration.")
     @ConfigKey(path = "register.confirm-password")
-    private boolean registerConfirmPassword = false;
+    private final boolean registerConfirmPassword = false;
 
     /**
      * Login settings
      */
     @ConfigKey(path="login.max-tries")
-    private int maxLoginTries = 5;
+    private final int maxLoginTries = 5;
     @ConfigHeader("Only allow registered players to join using exactly the same name as registered.")
     @ConfigKey(path = "login.username-match-exact")
-    private boolean matchUsernameExact = true;
+    private final boolean matchUsernameExact = true;
 
     /**
      * Password settings.
      */
     @ConfigKey(path="password.min-length")
-    private int passwordMinLength = 6;
+    private final int passwordMinLength = 6;
     @ConfigKey(path="password-max-length")
-    private int passwordMaxLength = 32;
+    private final int passwordMaxLength = 32;
 
     /**
      * Join settings.
      */
     @ConfigHeader("When enabled, player gets a blindness effect when not logged in.")
     @ConfigKey(path = "join.blindness")
-    private boolean blindness = true;
+    private final boolean blindness = true;
     @ConfigHeader({
             "Temporarily login location until player has logged in.",
             "Available options: DEFAULT, SPAWN, RANDOM"
     })
     @ConfigKey(path = "join.location")
-    private String location = "DEFAULT";
+    private final String location = "DEFAULT";
     @ConfigHeader({
             "Hides the player's inventory until they log in.",
             "DEPRECATED: This feature is being redesigned to be more reliable, see 'hide-inventory-safe'"
     })
     @ConfigKey(path="join.hide-inventory")
-    private boolean hideInventoryOld = false;
+    private final boolean hideInventoryOld = false;
     @ConfigHeader({
             "Safely hides the player's inventory until the player is logged in",
             "This required ProtocolLib to be installed",
     })
     @ConfigKey(path = "join.hide-inventory-safe")
-    private boolean hideInventory = false;
+    private final boolean hideInventory = false;
 
     /**
      * Username settings.
@@ -77,37 +77,37 @@ public class LoginSecurityConfig extends AbstractConfig {
             "Disabling this can be a security risk!"
     })
     @ConfigKey(path="username.filter-special-chars")
-    private boolean filterSpecialChars = true;
+    private final boolean filterSpecialChars = true;
     @ConfigKey(path="username.min-length")
-    private int usernameMinLength = 3;
+    private final int usernameMinLength = 3;
     @ConfigKey(path="username.max-length")
-    private int usernameMaxLength = 16;
+    private final int usernameMaxLength = 16;
 
     @ConfigHeader(path="command-shortcut", value="Shortcut that can be used as alternative to login/register command. Does not replace the defaults")
     @ConfigKey(path="command-shortcut.enabled")
-    private boolean useCommandShortcut = false;
+    private final boolean useCommandShortcut = false;
     @ConfigKey(path="command-shortcut.login")
-    private String loginCommandShortcut = "/l";
+    private final String loginCommandShortcut = "/l";
     @ConfigKey(path="command-shortcut.register")
-    private String registerCommandShortcut = "/reg";
+    private final String registerCommandShortcut = "/reg";
 
     @ConfigKey(path = "updater.enabled")
-    private boolean updaterEnabled = true;
+    private final boolean updaterEnabled = true;
     @ConfigHeader("The type of builds you are checking. RELEASE, BETA, ALPHA")
     @ConfigKey(path = "updater.channel")
-    private String updaterChannel = "BETA";
+    private final String updaterChannel = "BETA";
 
     @ConfigHeader("Session timeout in seconds, set to -1 to disable.")
     @ConfigKey
-    private int sessionTimeout = 60;
+    private final int sessionTimeout = 60;
 
     @ConfigHeader("Login timeout in seconds, set to -1 to disable.")
     @ConfigKey
-    private int loginTimeout = 120;
+    private final int loginTimeout = 120;
 
     @ConfigHeader("Login/register message delay in seconds.")
     @ConfigKey
-    private int loginMessageDelay = 10;
+    private final int loginMessageDelay = 10;
 
     @ConfigHeader({
             "Language for messages, check wiki for more info.",
@@ -115,7 +115,7 @@ public class LoginSecurityConfig extends AbstractConfig {
             "This setting should be set tot he file name without .json"
     })
     @ConfigKey
-    private String language = "en_us";
+    private final String language = "en_us";
 
     public LoginSecurityConfig(ConfigurationModule module) {
         super(module);

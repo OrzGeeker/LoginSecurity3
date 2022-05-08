@@ -17,9 +17,9 @@ public class HashTest {
         for(Algorithm algorithm : Algorithm.values()) {
             if(algorithm.isDeprecated()) continue;
             String hashed = algorithm.hash(rightPassword);
-            Assert.assertNotEquals("Algorithm " + algorithm.toString() + " did nothing", rightPassword, hashed);
-            Assert.assertTrue("Algorithm " + algorithm.toString() + " checked wrongly", algorithm.check(rightPassword, hashed));
-            Assert.assertFalse("Algorithm " + algorithm.toString() + " check poorly", algorithm.check(wrongPassword, hashed));
+            Assert.assertNotEquals("Algorithm " + algorithm + " did nothing", rightPassword, hashed);
+            Assert.assertTrue("Algorithm " + algorithm + " checked wrongly", algorithm.check(rightPassword, hashed));
+            Assert.assertFalse("Algorithm " + algorithm + " check poorly", algorithm.check(wrongPassword, hashed));
         }
     }
 }

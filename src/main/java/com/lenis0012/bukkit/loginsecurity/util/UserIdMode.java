@@ -33,7 +33,7 @@ public enum UserIdMode {
             case MOJANG:
                 return profile.getUniqueUserId();
             default:
-                throw new IllegalStateException("Invalid uuid mode: " + toString());
+                throw new IllegalStateException("Invalid uuid mode: " + this);
         }
     }
 }

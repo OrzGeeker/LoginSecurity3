@@ -3,7 +3,7 @@ package com.lenis0012.bukkit.loginsecurity.modules.captcha;
 import org.bukkit.map.MapFont;
 
 public class CaptchaFont extends MapFont {
-    private static CaptchaFont instance = new CaptchaFont();
+    private static final CaptchaFont instance = new CaptchaFont();
 
     public static CaptchaFont getInstance() {
         return instance;

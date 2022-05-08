@@ -1,14 +1,11 @@
 package com.lenis0012.bukkit.loginsecurity.modules.general;
 
 import com.lenis0012.bukkit.loginsecurity.LoginSecurity;
-import com.lenis0012.bukkit.loginsecurity.LoginSecurityConfig;
 import com.lenis0012.bukkit.loginsecurity.commands.*;
 import com.lenis0012.bukkit.loginsecurity.modules.language.LanguageModule;
 import com.lenis0012.pluginutils.Module;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;

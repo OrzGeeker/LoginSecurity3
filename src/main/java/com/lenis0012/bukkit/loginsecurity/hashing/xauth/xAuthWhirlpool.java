@@ -117,8 +117,8 @@ public class xAuthWhirlpool {
                     "\u2ABB\uc153\udc0B\u9d6c\u3174\uF646\uAc89\u14E1" +
                     "\u163A\u6909\u70B6\ud0Ed\ucc42\u98A4\u285c\uF886";
 
-    private static long[][] C = new long[8][256];
-    private static long[] rc = new long[R + 1];
+    private static final long[][] C = new long[8][256];
+    private static final long[] rc = new long[R + 1];
 
     static {
         for (int x = 0; x < 256; x++) {

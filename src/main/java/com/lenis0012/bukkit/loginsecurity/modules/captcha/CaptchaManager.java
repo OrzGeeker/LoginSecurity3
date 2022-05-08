@@ -27,7 +27,7 @@ public class CaptchaManager extends Module<LoginSecurity> implements Listener {
     private Method setMapIdMethod;
 
     private int mapViewId;
-    private boolean failedToLoadMapView = false;
+    private final boolean failedToLoadMapView = false;
 
     public CaptchaManager(LoginSecurity plugin) {
         super(plugin);
